@@ -127,8 +127,7 @@ public class FlightReservationApp {
         while (true) {
             System.out.print(prompt);
             try {
-                int value = Integer.parseInt(scanner.nextLine().trim());
-                return value;
+                return Integer.parseInt(scanner.nextLine().trim());
             } catch (NumberFormatException | InputMismatchException e) {
                 System.out.println("Invalid number. Please try again.");
             }

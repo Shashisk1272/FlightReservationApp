@@ -28,12 +28,12 @@ public class Reservation {
 
     @Override
     public String toString() {
-        return "Reservation{" +
-                "customerName='" + customerName + '\'' +
-                ", flightNumber='" + flight.getFlightNumber() + '\'' +
-                ", destination='" + flight.getDestination() + '\'' +
-                ", departureTime=" + flight.getDepartureTime() +
-                ", seatsBooked=" + seatsBooked +
-                '}';
+        return "Hi "
+                 + customerName + " Below are your Flight Details \n" +'\'' +
+                " flightNumber ='" + flight.getFlightNumber() +"\n" + '\'' +
+                " destination='" + flight.getDestination() + "\n" +'\'' +
+                " departureTime=" + flight.getDepartureTime() + "\n" +
+                " seatsBooked=" + seatsBooked
+                ;
     }
 }

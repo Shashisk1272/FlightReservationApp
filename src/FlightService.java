@@ -13,10 +13,6 @@ public class FlightService {
         // Preload some sample flights (in-memory data)
         SampleDataLoader.loadSampleFlights(flights);
     }
-
-    /**
-     * Search for flights by destination and date (ignoring time).
-     */
     public List<Flight> searchFlights(String destination, LocalDate date) {
         Objects.requireNonNull(destination, "destination must not be null");
         Objects.requireNonNull(date, "date must not be null");
@@ -33,12 +29,6 @@ public class FlightService {
         return result;
     }
 
-    /**
-     * Book a flight for a customer.
-     * Ensures availableSeats never go below zero (enforced inside Flight.reserveSeats()).
-     *
-     * @throws IllegalArgumentException if seats invalid or not enough seats
-     */
     public Reservation bookFlight(String customerName, Flight flight, int seats) {
         Objects.requireNonNull(customerName, "customerName must not be null");
         Objects.requireNonNull(flight, "flight must not be null");
@@ -54,10 +44,6 @@ public class FlightService {
         reservations.add(reservation);
         return reservation;
     }
-
-    /**
-     * Return all reservations for the given customer.
-     */
     public List<Reservation> getReservationsForCustomer(String customerName) {
         Objects.requireNonNull(customerName, "customerName must not be null");
         List<Reservation> result = new ArrayList<>();
@@ -67,12 +53,10 @@ public class FlightService {
             }
         }
         return result;
-    }
 
-    /**
-     * Expose flights as read-only list for the console UI.
-     */
-    public List<Flight> getAllFlights() {
+}
+
+public List<Flight> getAllFlights() {
         return Collections.unmodifiableList(flights);
     }
 }

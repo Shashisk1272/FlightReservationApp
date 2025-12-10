@@ -34,10 +34,6 @@ public class Flight {
         return availableSeats;
     }
 
-    /**
-     * Decrease available seats by given amount.
-     * Throws IllegalArgumentException if seats would go negative.
-     */
     public void reserveSeats(int seats) {
         if (seats <= 0) {
             throw new IllegalArgumentException("Seats must be positive");
