@@ -46,7 +46,7 @@ class FlightServiceTest {
 
     @Test
     void bookFlight_reducesAvailableSeats() {
-        Flight flight = flightService.getAllFlights().get(0); // FL001
+        Flight flight = flightService.getAllFlights().get(0);
         int originalSeats = flight.getAvailableSeats();
 
         Reservation reservation = flightService.bookFlight("Alice", flight, 2);
@@ -59,7 +59,7 @@ class FlightServiceTest {
 
     @Test
     void bookFlight_exactAvailableSeatsIsAllowed() {
-        Flight flight = flightService.getAllFlights().get(1); // Second flight (any with enough seats)
+        Flight flight = flightService.getAllFlights().get(1);
         int targetSeats = flight.getAvailableSeats();
 
         Reservation reservation = flightService.bookFlight("Bob", flight, targetSeats);
@@ -70,7 +70,7 @@ class FlightServiceTest {
 
     @Test
     void bookFlight_moreSeatsThanAvailable_throwsException() {
-        Flight flight = flightService.getAllFlights().get(2); // FL003
+        Flight flight = flightService.getAllFlights().get(2);
         int originalSeats = flight.getAvailableSeats();
 
         int tooManySeats = originalSeats + 1;
@@ -84,10 +84,11 @@ class FlightServiceTest {
 
     @Test
     void getReservationsForCustomer_returnsCorrectReservations() {
-        Flight flight = flightService.getAllFlights().get(3); // FL004
+        Flight flight = flightService.getAllFlights().get(3);
 
         flightService.bookFlight("Diana", flight, 1);
-        flightService.bookFlight("DIANA", flight, 2); // Test case-insensitive match
+        flightService.bookFlight("DIANA", flight, 2);
+        flightService.bookFlight("DIANA", flight, 2);
         flightService.bookFlight("Other", flight, 1);
 
         List<Reservation> reservations = flightService.getReservationsForCustomer("diana");
