@@ -1,3 +1,5 @@
+package Java;
+
 import java.util.Objects;
 
 public class Reservation {
@@ -29,7 +31,7 @@ public class Reservation {
     @Override
     public String toString() {
         return "Hi "
-                 + customerName + " Below are your Flight Details \n" +'\'' +
+                 + customerName + " Below are your Java.Flight Details \n" +'\'' +
                 " flightNumber ='" + flight.getFlightNumber() +"\n" + '\'' +
                 " destination='" + flight.getDestination() + "\n" +'\'' +
                 " departureTime=" + flight.getDepartureTime() + "\n" +

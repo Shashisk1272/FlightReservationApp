@@ -1,3 +1,5 @@
+package Java;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
@@ -12,7 +14,7 @@ public class FlightReservationApp {
         FlightService flightService = new FlightService();
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("=== Flight Reservation System ===");
+        System.out.println("=== Java.Flight Java.Reservation System ===");
 
         boolean exit = false;
         while (!exit) {

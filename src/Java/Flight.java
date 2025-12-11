@@ -1,3 +1,4 @@
+package Java;
 
 import java.time.LocalDateTime;
 import java.util.Objects;
@@ -46,7 +47,7 @@ public class Flight {
 
     @Override
     public String toString() {
-        return "Flight{" +
+        return "Java.Flight{" +
                 "flightNumber='" + flightNumber + '\'' +
                 ", destination='" + destination + '\'' +
                 ", departureTime=" + departureTime +

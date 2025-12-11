@@ -1,3 +1,5 @@
+package Java;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -34,7 +36,7 @@ public class FlightService {
         Objects.requireNonNull(flight, "flight must not be null");
 
         if (!flights.contains(flight)) {
-            throw new IllegalArgumentException("Flight is not managed by this service");
+            throw new IllegalArgumentException("Java.Flight is not managed by this service");
         }
 
         // This will throw if seats would go below zero
